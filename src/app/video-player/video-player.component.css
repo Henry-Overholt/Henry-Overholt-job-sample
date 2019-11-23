@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "BRANDON_BLD";
+  src: url("../../assets/fonts/BRANDON_BLD.otf");
+}
+@font-face {
+  font-family: "BRANDON_BLK";
+  src: url("../../assets/fonts/BRANDON_BLK.otf");
+}
+@font-face {
+  font-family: "BRANDON_LIGHT";
+  src: url("../../assets/fonts/BRANDON_LIGHT.otf");
+}
+@font-face {
+  font-family: "BRANDON_MED";
+  src: url("../../assets/fonts/BRANDON_MED.otf");
+}
+@font-face {
+  font-family: "BRANDON_REG";
+  src: url("../../assets/fonts/BRANDON_REG.otf");
+}
+header {
+  width: 100%;
+  height: 150px;
+}
+span {
+  font-weight: bold;
+  font-family: "BRANDON_BLD";
+}
+p {
+  color: rgb(57, 60, 62);
+  font-family: "BRANDON_REG";
+}
+#userWelcome {
+  background: rgb(0, 157, 220);
+  color: white;
+  height: 25%;
+  display: flex;
+  align-items: center;
+}
+#welcome {
+  margin-left: 40px;
+  color: rgb(235, 235, 235);
+}
+#title {
+  background: rgb(57, 60, 62);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+}
+#logo {
+  width: 100px;
+  margin-left: 40px;
+}
+h1 {
+  margin-left: 30px;
+  color: rgb(235, 235, 235);
+  font-family: "BRANDON_LIGHT";
+}
+.selected {
+  border: 7px solid rgb(250, 166, 26);
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#videoPlayerContainer {
+  width: 95%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#videoToPlayContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+video {
+  width: 75%;
+  height: 100%;
+}
+#videoLibContainer {
+  width: 24%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.video {
+  width: 100%;
+  margin-top: 5px;
+}
+
+#voteContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 20%;
+}
+#videoStatsContainer {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgb(209, 209, 209);
+}
+h2 {
+  color: rgb(57, 60, 62);
+  font-family: "BRANDON_LIGHT";
+}
+.upVote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+}
+.count {
+  font-size: 20px;
+  padding-left: 4px;
+  color: rgb(250, 166, 26);
+  font-family: "BRANDON_LIGHT";
+}
+.icon {
+  width: 40%;
+}
+#powered_by_24g {
+  width: 200px;
+  height: 100px;
+}

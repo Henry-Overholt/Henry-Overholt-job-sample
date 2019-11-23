@@ -1,0 +1,64 @@
+<header>
+  <div id="userWelcome">
+    <p id="welcome">
+      Welcome, <span id="username">{{ user }}</span>
+    </p>
+  </div>
+  <div id="title">
+    <img id="logo" src="../../assets/svg/24g_logo.svg" alt="24g_logo" />
+    <h1>VIDEO PLAYER</h1>
+  </div>
+</header>
+<main>
+  <div id="videoPlayerContainer">
+    <h2>{{ videoPlaying.name }}</h2>
+    <div id="videoToPlayContainer">
+      <video
+        src="{{ videoPlaying.video }}"
+        (ended)="handleViews(videoPlaying.index)"
+        controls
+      ></video>
+      <div id="videoLibContainer">
+        <div *ngFor="let video of videoLib; index as i">
+          <img
+            src="{{ video.picture }}"
+            alt="{{ video.name }}"
+            class="video"
+            [ngClass]="video.selected == true ? 'selected' : 'notSelected'"
+            (click)="handleVidClick(i)"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="videoStatsContainer">
+      <p>{{ videoPlaying.views }} views</p>
+      <div id="voteContainer">
+        <div class="upVote" (click)="handleLike(videoPlaying.index)">
+          <img
+            src="../../assets/svg/thumbs_up.svg"
+            alt="thumbs_up"
+            class="icon"
+          />
+          <p class="count">{{ videoPlaying.likes }}</p>
+        </div>
+        <div class="upVote" (click)="handleDislike(videoPlaying.index)">
+          <img
+            src="../../assets/svg/thumbs_down.svg"
+            alt="thumbs_down"
+            class="icon"
+          />
+          <p class="count">{{ videoPlaying.dislikes }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <button (click)="testTime()">Time left</button>
+  <img
+    src="../../assets/svg/powered_by_24g.svg"
+    id="powered_by_24g"
+    alt="powered_by_24g"
+  />
+</footer>
