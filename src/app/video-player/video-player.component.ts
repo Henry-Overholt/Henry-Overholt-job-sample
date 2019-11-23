@@ -7,15 +7,16 @@ import { url } from "inspector";
   styleUrls: ["./video-player.component.css"]
 })
 export class VideoPlayerComponent implements OnInit {
-  user: string = "Henry";
   videoPlaying: any = {
-    picture: "video 1",
-    video: "",
-    name: "No video has been selected",
+    picture:
+      "https://static-email-hosting.s3.amazonaws.com/24G_Test_Project/videos/ces_overview.jpg",
+    video:
+      "https://static-email-hosting.s3.amazonaws.com/24G_Test_Project/videos/ces_overview.mp4",
+    name: "CES Overview",
     views: 0,
     likes: 0,
     dislikes: 0,
-    index: 0,
+    index: 1,
     selected: false
   };
   videoLib: any[] = [
@@ -41,7 +42,7 @@ export class VideoPlayerComponent implements OnInit {
       likes: 0,
       dislikes: 0,
       index: 1,
-      selected: false
+      selected: true
     },
     {
       picture:
@@ -73,7 +74,6 @@ export class VideoPlayerComponent implements OnInit {
   handleDislike(i: number) {
     this.videoLib[i].dislikes++;
   }
-
   handleViews(i: number) {
     this.videoLib[i].views++;
   }

@@ -1,8 +1,6 @@
 <header>
   <div id="userWelcome">
-    <p id="welcome">
-      Welcome, <span id="username">{{ user }}</span>
-    </p>
+    <p id="welcome">Welcome, <span id="username">Henry</span></p>
   </div>
   <div id="title">
     <img id="logo" src="../../assets/svg/24g_logo.svg" alt="24g_logo" />
@@ -17,7 +15,9 @@
         src="{{ videoPlaying.video }}"
         (ended)="handleViews(videoPlaying.index)"
         controls
-      ></video>
+      >
+        You're Browser doesn't support this video
+      </video>
       <div id="videoLibContainer">
         <div *ngFor="let video of videoLib; index as i">
           <img
@@ -55,7 +55,6 @@
   </div>
 </main>
 <footer>
-  <button (click)="testTime()">Time left</button>
   <img
     src="../../assets/svg/powered_by_24g.svg"
     id="powered_by_24g"
