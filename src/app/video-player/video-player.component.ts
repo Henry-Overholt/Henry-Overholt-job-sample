@@ -57,7 +57,8 @@ export class VideoPlayerComponent implements OnInit {
     console.log(this.cookieService.getAll());
   }
   startCookies() {
-    if (this.cookieService.get("start") === "0") {
+    //cookies are knew to me, this is incase on a new browser they get set again, incase that happens
+    if (this.cookieService.get("start") != "1") {
       this.cookieService.set("start", "1");
       this.cookieService.set("firstDislikes", "0");
       this.cookieService.set("firstLikes", "0");
